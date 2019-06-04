@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  def show    
+  def show
     @post = Post.find_by(params[:id])
   end
 
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:content)
+      params.require(:post).permit(:content, :title, :what_content, :what_problem)
     end
 
     def correct_user

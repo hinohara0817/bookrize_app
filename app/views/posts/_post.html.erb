@@ -4,6 +4,7 @@
 <span class="timestamp">
     Posted <%= time_ago_in_words(post.created_at) %> ago.
   </span>
+<%= link_to "show",post_path(@post) %>
 <% if current_user?(post.user) %>
   <%= link_to "Delete", post, method: :delete,
   date: {confirm: "You sure?"} %>
