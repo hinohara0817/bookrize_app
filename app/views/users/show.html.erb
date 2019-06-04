@@ -3,13 +3,13 @@
 <p>Find me in app/views/users/show.html.erb</p>
 <h1>My page</h1>
 <section class="post_form">
-  <%= render 'shared/post_form' %>
+  <%= link_to "投稿する", new_post_path %>
 </section>
 <%= link_to "edit", edit_user_registration_path(@user) %>
 <div class="col-md-8">
   <% if @user.posts.any? %>
   <ol class="posts">
-    <%= render @posts %>
+    <%= link_to "a", post_path(@post) %>
   </ol>
   <% end %>
 </div>

@@ -5,8 +5,8 @@ class UsersController < ApplicationController
 
   def show
     @user =User.find_by(params[:id])
-    @posts =@user.posts.all
-    @post = current_user.posts.build
+    @posts = @user.posts.all
+    @post = Post.find_by(params[:id])
   end
 
 end
