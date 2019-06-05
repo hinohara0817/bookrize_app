@@ -6,7 +6,8 @@
       <li><%= link_to "home", root_path %></li>
       <li><%= link_to "about", about_path %></li>
       <% if user_signed_in? %>
-      <li><%= link_to "my_page", users_show_path(@user) %></li>
+      <li><%= link_to "my_page", current_user %></li>
+      <li><%= link_to "Bookrize", new_post_path %><li>
       <li><%= link_to "log_out", destroy_user_session_path, method: :delete, data: { confirm: "You sure?" } %></li>
       <% else %>
       <li><%= link_to "log_in", new_user_session_path %></li>
