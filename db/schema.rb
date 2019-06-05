@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_04_014836) do
+ActiveRecord::Schema.define(version: 2019_06_05_101824) do
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
@@ -20,6 +20,24 @@ ActiveRecord::Schema.define(version: 2019_06_04_014836) do
     t.string "title"
     t.text "what_content"
     t.text "what_problem"
+    t.text "question"
+    t.text "interest"
+    t.text "important"
+    t.text "solution"
+    t.text "start"
+    t.text "end"
+    t.text "different"
+    t.text "most"
+    t.text "agreement"
+    t.text "intersting"
+    t.text "sentence"
+    t.text "heart"
+    t.text "dull"
+    t.text "difficult"
+    t.text "titles"
+    t.text "foreword"
+    t.text "summary"
+    t.text "chapter"
     t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end

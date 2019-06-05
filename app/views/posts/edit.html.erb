@@ -1,27 +1,123 @@
 <% provide(:title, "edit") %>
 <%= form_for(@post) do |f| %>
 
+  <h4>・読書前に入力</h4>
   <div class="field">
     <%= f.label :本のタイトル %><br />
     <%= f.text_field :title %>
   </div>
 
   <div class="field">
-    <%= f.label :この本の内容を予測 %><br />
+    <%= f.label :章ごとの役割、論理構造を予測 %><br />
     <%= f.text_area :what_content %>
   </div>
 
   <div class="field">
-    <%= f.label :この本の問題意識 %><br />
+    <%= f.label :章ごとに質問化して答えを予測 %><br />
+    <%= f.text_field :question %>
+  </div>
+
+  <div class="field">
+    <%= f.label :この本から学びたい興味あると思うことを３つ %><br />
+    <%= f.text_field :interest %>
+  </div>
+
+  <div class="field">
+    <%= f.label :この本を読むことがなぜ重要なのか %><br />
+    <%= f.text_field :important %>
+  </div>
+
+  <h4>・読書中に入力</h4>
+
+  <div class="field">
+    <%= f.label :章ごとの疑問に答ていく %><br />
+    <%= f.text_field :chapter %>
+  </div>
+
+  <div class="field">
+    <%= f.label :"この本の問題意識(メインテーマ)は何か" %><br />
     <%= f.text_area :what_problem %>
   </div>
 
   <div class="field">
-    <%= f.label :保留 %><br />
+    <%= f.label :それを解決する方法は何か %><br />
+    <%= f.text_field :solution %>
+  </div>
+
+  <div class="field">
+    <%= f.label :どのように始まったか %><br />
+    <%= f.text_field :start %>
+  </div>
+
+  <div class="field">
+    <%= f.label :どのように終わったか %><br />
+    <%= f.text_field :end %>
+  </div>
+
+  <div class="field">
+    <%= f.label :他の本とどこが違うか %><br />
+    <%= f.text_field :different %>
+  </div>
+
+  <div class="field">
+    <%= f.label :作者が一番伝えたいことは何かなぜそれが重要なのか %><br />
+    <%= f.text_field :most %>
+  </div>
+
+  <div class="field">
+    <%= f.label :作者のどこに一番賛同できるかその理由は何か %><br />
+    <%= f.text_field :agreement %>
+  </div>
+
+  <div class="field">
+    <%= f.label :面白かった事例は何か %><br />
+    <%= f.text_field :intersting %>
+  </div>
+
+  <div class="field">
+    <%= f.label :この本の一番大事な一文はどこかその理由は %><br />
+    <%= f.text_field :sentence %>
+  </div>
+
+  <div class="field">
+    <%= f.label :一番心に刺さったのはどこか %><br />
+    <%= f.text_field :heart %>
+  </div>
+
+  <div class="field">
+    <%= f.label :どこかがつまらなかったか%><br />
+    <%= f.text_field :dull %>
+  </div>
+
+  <div class="field">
+    <%= f.label :どこがわかりづらかったか %><br />
+    <%= f.text_field :difficult %>
+  </div>
+
+  <div class="field">
+    <%= f.label :タイトルは適切かもっと良いタイトルは何か %><br />
+    <%= f.text_field :titles %>
+  </div>
+
+  <div class="field">
+    <%= f.label :前書きは役に立ったか改善点はないか %><br />
+    <%= f.text_field :foreword %>
+  </div>
+
+  <h4>・読書後に入力</h4>
+
+  <div class="field">
+    <%= f.label :翌日に章ごとに要約 %><br />
+    <%= f.text_field :summary %>
+  </div>
+
+  <div class="field">
+    <%= f.label :予測していた論理構造が合っていたか %><br />
     <%= f.text_area :content, placeholder: "Compose new micropost..." %>
   </div>
 
   <div class="actions">
   <%= f.submit "Post", class: "btn btn-primary" %>
   </div>
+
 <% end %>
