@@ -1,6 +1,6 @@
 <% provide(:title, "post") %>
 <%= form_for(@post) do |f| %>
-
+<div class = "txt">
   <h4>・読書前に入力</h4>
   <div class="field">
     <%= f.label :本のタイトル %><br />
@@ -119,5 +119,5 @@
   <div class="actions">
   <%= f.submit "Post", class: "btn btn-primary" %>
   </div>
-
+</div>
 <% end %>

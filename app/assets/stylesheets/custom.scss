@@ -61,3 +61,28 @@ aside {
     margin-bottom: 5px;
   }
 }
+
+.main-container{
+  color: white;
+  background-image: url('/library-869061_1920.jpg');
+  height: 800px;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  overflow: scroll;
+  opacity: 0.9;
+  text-align: center;
+  margin: auto;
+}
+
+.field{
+  color: lightblue;
+}
+
+.txt{
+  position: absolute;
+}
+
+.logo{
+  font-family: 'Sacramento', cursive;
+}

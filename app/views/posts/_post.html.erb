@@ -1,13 +1,12 @@
 <li id="post-<%= @post.id %>">
-<span class="user">投稿者　<%= link_to post.user.name, post.user %></span>
-<span class="content"><%= post.title %></span>
-<span class="timestamp">
+<span class="user">投稿者　<%= link_to post.user.name, post.user, :style=>"color:lightblue;" %></span>
+<span class="content"><%= link_to post.title, post_path(post), :style=>"color:lightblue;" %></span>
+<span >
     Posted <%= time_ago_in_words(post.created_at) %> ago.
 </span>
-<%= link_to "詳細",post_path(post) %>
 <% if current_user?(post.user) %>
-  <%= link_to "編集", edit_post_path(@post) %>
+  <%= link_to "編集", edit_post_path(@post), :style=>"color:lightblue;" %>
   <%= link_to "削除", post, method: :delete,
-  date: {confirm: "You sure?"} %>
+  date: {confirm: "You sure?"}, :style=>"color:lightblue;" %>
 <% end %>
 </li>
