@@ -13,12 +13,13 @@
   <body>
     <%= render 'layouts/header' %>
     <div class="background">
-    <div class="main-containers">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
-      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    </div>
+      <div class="main-containers">
+        <% flash.each do |key, value| %>
+          <%= content_tag(:div, value, class: "#{key}") %>
+        <% end %>
+        <%= yield %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      </div>
     </div>
   </body>
 </html>
