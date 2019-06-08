@@ -1,6 +1,6 @@
 <% @posts.each do |post| %>
-    <li>
+    <h3>
       <%= link_to post.user.name, post.user %>
       <%= link_to post.title, post %>
-    </li>
+    </h3>
 <% end %>

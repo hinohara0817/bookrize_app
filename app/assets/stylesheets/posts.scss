@@ -1,3 +1,26 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h4 {
+  position: relative;
+  padding: 0.5em;
+  width: 400px;
+  background: #a6d3c8;
+  color: white;
+  margin-top: 50px;
+  margin-left: 450px;
+}
+
+.item{
+  margin-right: 300px;
+}
+
+h4::before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);
+}

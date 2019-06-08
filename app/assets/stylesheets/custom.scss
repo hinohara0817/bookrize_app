@@ -9,6 +9,7 @@ body {
 
 .center {
   text-align: center;
+  list-style-position: inside;
 }
 
 #logo {
@@ -62,17 +63,35 @@ aside {
   }
 }
 
-.main-container{
+.main-containers{
   color: white;
+  height: 800px;
+  position: relative;
+  overflow: scroll;
+  opacity: 0.9;
+  text-align: center;
+  margin: auto;
+  z-index: 1;
+  list-style-position: inside;
+  padding-top :100px;
+}
+
+.background{
   background-image: url('/library-869061_1920.jpg');
   height: 800px;
   background-size: cover;
   position: relative;
   background-attachment: fixed;
-  overflow: scroll;
-  opacity: 0.9;
-  text-align: center;
-  margin: auto;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .field{
@@ -85,4 +104,37 @@ aside {
 
 .logo{
   font-family: 'Sacramento', cursive;
+}
+
+ /* ログインフォーム*/
+.box17{
+    width: 300px;
+    margin-left: 500px;
+    padding: 0.5em 1.5em;
+    position: relative;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    background-color: white;
+}
+.box17:before, .box17:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: calc(100% + 20px);
+    background-color: black;
+}
+.box17:before {left: 0px;}
+.box17:after {right: 0px;}
+.box17 p {
+    margin: 0;
+    padding: 0;
+}
+
+.color{
+  color: lightblue;
+}
+
+.btn{
+  margin-top: 10px;
 }

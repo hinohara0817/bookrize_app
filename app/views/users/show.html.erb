@@ -8,11 +8,9 @@
 <% else %>
 <h1>ユーザーページ（<%= @user.name %>）</h1>
 <% end %>
-<div class="col-md-8">
   <% if @user.posts.any? %>
   <h3>投稿一覧 (<%= @user.posts.count %>)</h3>
   <ol class="posts">
     <%= render @posts %>
   </ol>
   <% end %>
-</div>

@@ -1,10 +1,8 @@
 <% provide(:title,"home") %>
   <% if user_signed_in? %>
-    <div class="col-md-8">
       <h3>Time Line</h3>
       <%= render 'shared/feed' %>
-      <%= link_to "index", posts_path %>
+      <%= link_to "投稿一覧", posts_path %>
   <% else %>
     <%= render 'defult_home' %>
-    </div>
   <% end %>

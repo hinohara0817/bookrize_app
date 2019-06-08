@@ -1,44 +1,45 @@
-<h4>本のタイトル</h4>
-<li><%= @post.title %></li>
+<% provide(:title, "post") %>
+<h4 >本のタイトル</h4>
+<p class = "title"><%= @post.title %></p>
+<h4>この本を読むことがなぜ重要なのか</h4>
+<p class = "item"><%= simple_format(@post.important) %></p>
+<h4>この本から学びたい興味あると思うことを３つ</h4>
+<p class = "item"><%= simple_format(@post.interest) %></p>
+<h4>章ごとに質問化して答えを予測</h4>
+<p class = "item"><%= simple_format(@post.question) %></p>
+<h4>章ごとの役割、論理構造を予測</h4>
+<p class = "item"><%=simple_format(@post.what_content) %></p>
+<h4>章ごとの疑問に答ていく</h4>
+<p class = "item"><%= simple_format(@post.chapter) %></p>
 <h4>あ</h4>
-<li><%= @post.what_content %></li>
+<p class = "item"><%= simple_format(@post.what_problem) %></p>
 <h4>あ</h4>
-<li><%= @post.question %></li>
+<p class = "item"><%= simple_format(@post.solution) %></p>
 <h4>あ</h4>
-<li><%= @post.interest %></li>
+<p class = "item"><%= simple_format(@post.start) %></p>
 <h4>あ</h4>
-<li><%= @post.important %></li>
+<p class = "item"><%= simple_format(@post.end) %></p>
 <h4>あ</h4>
-<li><%= @post.what_problem %></li>
+<p class = "item"><%= simple_format(@post.different) %></p>
 <h4>あ</h4>
-<li><%= @post.solution %></li>
+<p class = "item"><%= simple_format(@post.most) %></p>
 <h4>あ</h4>
-<li><%= @post.start %></li>
+<p class = "item"><%= simple_format(@post.agreement) %></p>
 <h4>あ</h4>
-<li><%= @post.end %></li>
+<p class = "item"><%= simple_format(@post.intersting) %></p>
 <h4>あ</h4>
-<li><%= @post.different %></li>
+<p class = "item"><%= simple_format(@post.sentence) %></p>
 <h4>あ</h4>
-<li><%= @post.most %></li>
+<p class = "item"><%= simple_format(@post.heart) %></p>
 <h4>あ</h4>
-<li><%= @post.agreement %></li>
+<p class = "item"><%= simple_format(@post.dull) %></p>
 <h4>あ</h4>
-<li><%= @post.intersting %></li>
+<p class = "item"><%= simple_format(@post.difficult) %></p>
 <h4>あ</h4>
-<li><%= @post.sentence %></li>
+<p class = "item"><%= simple_format(@post.titles) %></p>
 <h4>あ</h4>
-<li><%= @post.heart %></li>
+<p class = "item"><%= simple_format(@post.foreword) %></p>
 <h4>あ</h4>
-<li><%= @post.dull %></li>
+<p class = "item"><%= simple_format(@post.summary) %></p>
 <h4>あ</h4>
-<li><%= @post.difficult %></li>
-<h4>あ</h4>
-<li><%= @post.titles %></li>
-<h4>あ</h4>
-<li><%= @post.foreword %></li>
-<h4>あ</h4>
-<li><%= @post.summary %></li>
-<h4>あ</h4>
-<li><%= @post.chapter %></li>
-<h4>あ</h4>
-<li><%= @post.content %></li>
+<p class = "item"><%= simple_format(@post.content) %></p>

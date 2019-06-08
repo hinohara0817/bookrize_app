@@ -1,5 +1,6 @@
 <% provide(:title, "sign_up") %>
-<h2>登録フォーム</h2>
+<div class="box17">
+<h2 class="color">登録フォーム</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -31,5 +32,5 @@
     <%= f.submit "登録", class: "btn btn-lg btn-primary" %>
   </div>
 <% end %>
-
+</div>
 <%= render "devise/shared/links" %>
