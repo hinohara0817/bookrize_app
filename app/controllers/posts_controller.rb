@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post= current_user.posts.build(post_params)
+    @post = current_user.posts.build(post_params)
     if @post.save
       flash[:success] = "Micropost created!"
       redirect_to root_url
@@ -44,14 +44,15 @@ class PostsController < ApplicationController
 
   private
 
-    def post_params
-      params.require(:post).permit(:content, :title, :what_content, :what_problem, :question,
-        :interest, :important, :solution, :start, :end, :different, :most, :agreement, :chapter,
-          :intersting, :sentence, :heart, :dull, :difficult, :titles, :foreword, :summary)
-    end
+  def post_params
+    params.require(:post).permit(:content, :title, :what_content, :what_problem, :question,
+                                 :interest, :important, :solution, :start, :end, :different, :most,
+                                 :agreement, :chapter, :intersting, :sentence, :heart, :dull,
+                                 :difficult, :titles, :foreword, :summary)
+  end
 
-    def correct_user
-      @post = current_user.posts.find_by(id: params[:id])
-      redirect_to root_url if @post.nil?
-    end
+  def correct_user
+    @post = current_user.posts.find_by(id: params[:id])
+    redirect_to root_url if @post.nil?
+  end
 end
