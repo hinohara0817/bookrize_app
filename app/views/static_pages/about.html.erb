@@ -1,8 +1,8 @@
 <% provide(:title, "about") %>
 <div>
   <h2>Bookrizeの使い方</h2>
-  <h4>使い方は簡単！</h4>
-  <h4>ログインして”投稿(bookrize)”ページから、読んだ本の内容を登録するだけです。</h4>
+  <h3>使い方は簡単！</h3>
+  <h3>ログインして”投稿(bookrize)”ページから、読んだ本の内容を登録するだけです。</h3>
 </div>
 <br />
 <div>
@@ -27,7 +27,7 @@
  <br />
 <div>
    <h3>BookrizeとはBook(本)とMemorize(記憶する)を組み合わせた造語です。</h3>
-   <h4>早速本を読んで記憶に残そう！</h4>
+   <h3>早速本を読んで記憶に残そう！</h3>
    <% unless user_signed_in? %>
    <%= link_to "登録", new_user_registration_path, class: "btn btn-lg btn-primary"%>
    <% end %>

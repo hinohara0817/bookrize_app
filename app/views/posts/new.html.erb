@@ -1,123 +1,124 @@
 <% provide(:title, "post") %>
+<h2><%= link_to "お手本を見る", post_path(2), :style=>"color: pink;" %></h2>
 <%= form_for(@post) do |f| %>
 
   <h4>・読書前に入力</h4>
   <div class="field">
     <%= f.label :本のタイトルと著者 %><br />
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :この本を読むことがなぜ重要なのか %><br />
-    <%= f.text_area :important %>
+    <%= f.text_area :important, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :この本から学びたい興味あると思うことを３つ %><br />
-    <%= f.text_area :interest %>
+    <%= f.text_area :interest, :size=>"60x3" %>
   </div>
 
   <div class="field">
     <%= f.label :章ごとに質問化して答えを予測 %><br />
-    <%= f.text_area :question %>
+    <%= f.text_area :question, :size=>"60x10" %>
   </div>
 
   <div class="field">
     <%= f.label :章ごとの役割、論理構造を予測 %><br />
-    <%= f.text_area :what_content %>
+    <%= f.text_area :what_content, :size=>"60x10" %>
   </div>
 
   <h4>・読書中に入力</h4>
 
   <div class="field">
     <%= f.label :章ごとの疑問に答ていく %><br />
-    <%= f.text_area :chapter %>
+    <%= f.text_area :chapter, :size=>"60x10" %>
   </div>
 
   <h4>・読書後に入力</h4>
 
   <div class="field">
     <%= f.label :翌日に章ごとに要約 %><br />
-    <%= f.text_area :summary %>
+    <%= f.text_area :summary, :size=>"60x10" %>
   </div>
 
   <div class="field">
     <%= f.label :"この本の問題意識(メインテーマ)は何か" %><br />
-    <%= f.text_area :what_problem %>
+    <%= f.text_area :what_problem, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :それを解決する方法は何か %><br />
-    <%= f.text_area :solution %>
+    <%= f.text_area :solution, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :どのように始まったか %><br />
-    <%= f.text_area :start %>
+    <%= f.text_area :start, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :どのように終わったか %><br />
-    <%= f.text_area :end %>
+    <%= f.text_area :end, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :他の本とどこが違うか %><br />
-    <%= f.text_area :different %>
+    <%= f.text_area :different, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :作者が一番伝えたいことは何かなぜそれが重要なのか %><br />
-    <%= f.text_area :most %>
+    <%= f.text_area :most, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :作者のどこに一番賛同できるかその理由は何か %><br />
-    <%= f.text_area :agreement %>
+    <%= f.text_area :agreement, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :面白かった事例は何か %><br />
-    <%= f.text_area :intersting %>
+    <%= f.text_area :intersting, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :この本の一番大事な一文はどこかその理由は %><br />
-    <%= f.text_area :sentence %>
+    <%= f.text_area :sentence, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :一番心に刺さったのはどこか %><br />
-    <%= f.text_area :heart %>
+    <%= f.text_area :heart, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :どこかがつまらなかったか%><br />
-    <%= f.text_area :dull %>
+    <%= f.text_area :dull, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :どこがわかりづらかったか %><br />
-    <%= f.text_area :difficult %>
+    <%= f.text_area :difficult, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :タイトルは適切かもっと良いタイトルは何か %><br />
-    <%= f.text_area :titles %>
+    <%= f.text_area :titles, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :前書きは役に立ったか改善点はないか %><br />
-    <%= f.text_area :foreword %>
+    <%= f.text_area :foreword, :size=>"60" %>
   </div>
 
   <div class="field">
     <%= f.label :予測していた論理構造が合っていたか %><br />
-    <%= f.text_area :content, placeholder: "this is last question..." %>
+    <%= f.text_area :content, placeholder: "this is last question...", :size=>"60" %>
   </div>
 
   <div class="actions">
-  <%= f.submit "Post", class: "btn btn-primary" %>
+  <%= f.submit "投稿", class: "btn btn-primary" %>
   </div>
 
 <% end %>

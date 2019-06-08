@@ -2,7 +2,7 @@
   <% if user_signed_in? %>
       <h3>Time Line</h3>
       <%= render 'shared/feed' %>
-      <%= link_to "投稿一覧", posts_path %>
+      <%= link_to "投稿一覧", posts_path, :style=>"color: pink;" %>
   <% else %>
     <%= render 'defult_home' %>
   <% end %>
