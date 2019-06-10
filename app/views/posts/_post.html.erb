@@ -6,7 +6,7 @@
 </span>
 <% if current_user?(post.user) %>
   <%= link_to "編集", edit_post_path(@post), :style=>"color:lightblue;" %>
-  <%= link_to "削除", post, method: :delete,
-  date: {confirm: "You sure?"}, :style=>"color:lightblue;" %>
+  <%= link_to "削除", post, method: :delete, :style=>"color:lightblue;",
+   data: { confirm: '削除しますか？' }%>
 <% end %>
 </li>

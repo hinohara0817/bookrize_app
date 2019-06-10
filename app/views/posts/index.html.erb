@@ -1,6 +1,7 @@
+<h4>投稿一覧</h4>
 <% @posts.each do |post| %>
-    <h3>
-      <%= link_to post.user.name, post.user %>
-      <%= link_to post.title, post %>
-    </h3>
+  <h5>
+    <%= link_to post.user.name, post.user, :style=>"color: pink;" %>
+    <%= link_to post.title, post, :style=>"color: pink;" %>
+  </h5>
 <% end %>

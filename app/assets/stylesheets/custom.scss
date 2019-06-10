@@ -105,6 +105,7 @@ aside {
 }
 
 .logo{
+  position: relative;
   font-family: 'Sacramento', cursive;
 }
 
@@ -155,4 +156,12 @@ aside {
 
 .error{
   color: lightblue;
+}
+
+.logo::after{
+  content: '読書記録は面倒だが、内容を忘れ、読み返す方がさらに面倒';
+  color: white;
+  position: absolute;
+  top: 40px;
+  left: 20px;
 }
